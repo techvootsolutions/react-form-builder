@@ -76,7 +76,7 @@ function App() {
 | type                      | String | true     | Specifies the type of input element. Valid values include "text," "number," "password," and other HTML input types.                            |
 | name                      | String | true     | Sets the name attribute of the input element. It is used to identify the input data when submitted in a form.                                 |
 | className                 | String | false    | Adds custom CSS classes to the input element, allowing for additional styling or integration with existing styling frameworks                   |
-| options                   | Array  | false    | An array of options used for input elements like select. Each option is an object with properties such as "value" and "label".                |
+| options                   | Array  | false    | An array of options used for input elements like select. Each option is an object with properties such as "value" and "option".                |
 | src                       | String | false    | Specifies the source URL for input elements like images. Used in conjunction with image-related input types.                                  |
 | width                     | String | false    | Sets the width of the input element. Can be specified in pixels, percentage, em, etc.                                                         |
 | height                    | String | false    | Sets the height of the input element. Can be specified in pixels, percentage, em, etc.                                                         |
@@ -101,21 +101,21 @@ const data = [
   },
   {
     type: "select",
-    options: ["options 1", "options 2"],
+    options:[{ value: "1", option: "options 1" },{ value: "2", option: "Option 2" }],
     name: "select",
     label: "Select Your dropdown value",
     required: "true",
   },
   {
     type: "radio",
-    options: ["radio 1", "radio 2"],
+    options:[{ value: "R1", option: "radio 1" },{ value: "R2", option: "radio 2" }],
     name: "radio",
     label: "select radio",
     required: "true",
   },
   {
     type: "checkbox",
-    options: ["checkbox 1", "checkbox 2"],
+    options:[{ value: "Check1", option: "checkbox 1" },{ value: "Check2", option: "checkbox 2" }],
     name: "checkbox",
     label: "select checkbox",
   },

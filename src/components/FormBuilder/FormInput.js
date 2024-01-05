@@ -29,8 +29,8 @@ const FormInput = ({
           >
             <option value="select option"> select option</option>
             {options?.map((option, index) => (
-              <option key={index} value={option}>
-                {option}
+              <option key={index} value={option?.value}>
+                {option?.option}
               </option>
             ))}
           </select>
@@ -46,9 +46,9 @@ const FormInput = ({
                 onChange={(e) => {
                   handleChange(e.target.name, e.target.value);
                 }}
-                value={option}
+                value={option?.value}
               />
-              <label>{option}</label>
+              <label>{option?.option}</label>
             </div>
           ))}
         </div>
@@ -59,13 +59,13 @@ const FormInput = ({
               <input
                 type="checkbox"
                 name={name}
-                value={option}
+                value={option?.value}
                 className={`form-builder-me-2 form-builder-mb-3${className ? ` ${className}` : ""}`}
                 onChange={(e) => {
                   handleChange(e.target.name, e.target.value, e.target.checked);
                 }}
               />
-              <label>{option}</label>
+              <label>{option?.option}</label>
             </div>
           ))}
         </div>
@@ -104,8 +104,8 @@ const FormInput = ({
               handleChange(name, e.target.value, false, e.target.files)
             }
             name={name}
-              placeholder={placeholder}
-              src={src && src}
+            placeholder={placeholder}
+            src={src && src}
             alt={alt && alt}
             width={width && width}
             height={height && height}

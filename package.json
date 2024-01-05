@@ -1,6 +1,6 @@
 {
   "name": "@techvootsolutions/form-builder",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "A @techvootsolutions/form-builder react component. Compatible with react ^18.0.2",
   "main": "./dist/bundle.js",
   "dependencies": {
